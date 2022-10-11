@@ -1,0 +1,100 @@
+{
+    "Seasons":[
+        {
+            "estacion": "verano",
+            "start": "0",
+            "end": "91",
+            "estado": [{
+                "condition": "muchoSol",
+                "water": "-10",
+                "abono": "-5",
+                "temp": "5"
+            },
+            {
+                "condition": "pocoSol",
+                "water": "-5",
+                "abono": "0",
+                "temp": "0"
+            },
+            {
+                "condition": "lluvia",
+                "water": "10",
+                "abono": "3",
+                "temp": "-5"
+            }
+        ]
+        },
+        {
+            "estacion": "invierno",
+            "start": "91",
+            "end": "182",
+            "estado": [{
+                "condition": "muchoFrio",
+                "water": "10",
+                "abono": "5",
+                "temp": "-10"
+            },
+            {
+                "condition": "pocoFrio",
+                "water": "5",
+                "abono": "5",
+                "temp": "-5"
+            },
+            {
+                "condition": "templado",
+                "water": "0",
+                "abono": "0",
+                "temp": "0"
+            }
+        ]
+        },
+        {
+            "estacion": "verano",
+            "start": "182",
+            "end": "273",
+            "estado": [{
+                "condition": "muchoSol",
+                "water": "-10",
+                "abono": "-5",
+                "temp": "5"
+            },
+            {
+                "condition": "pocoSol",
+                "water": "-5",
+                "abono": "0",
+                "temp": "0"
+            },
+            {
+                "condition": "lluvia",
+                "water": "10",
+                "abono": "3",
+                "temp": "-5"
+            }
+        ]
+        },
+        {
+            "estacion": "invierno",
+            "start": "91",
+            "end": "182",
+            "estado": [{
+                "condition": "muchoFrio",
+                "water": "10",
+                "abono": "5",
+                "temp": "-10"
+            },
+            {
+                "condition": "pocoFrio",
+                "water": "5",
+                "abono": "5",
+                "temp": "-5"
+            },
+            {
+                "condition": "templado",
+                "water": "0",
+                "abono": "0",
+                "temp": "0"
+            }
+        ]
+        }
+    ]
+}

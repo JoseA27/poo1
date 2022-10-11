@@ -1,0 +1,228 @@
+{
+    "Plantas": [
+        {
+            "nombre":"Culantro",
+            "vida":"100",
+            "consumo": "10",
+            "dias": "50",
+            "estados":[{
+                "nivel": "ALMACIGO",
+                "min_dias": "0",
+                "max_dias": "10",
+                "max_vida": "100",
+                "min_vida":"60",
+                "max_agua": "40",
+                "min_agua": "0",
+                "max_abono": "30",
+                "min_abono": "10",
+                "efectoWP":"3",
+                "efectoWN":"-4",
+                "efectoAP":"5",
+                "efectoAN":"-4",
+                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\CulantroAlmacigo.jpg"
+
+            },
+            {
+                "nivel": "MEDIANA",
+                "min_dias": "10",
+                "max_dias": "20",
+                "max_vida": "100",
+                "min_vida": "70",
+                "max_agua": "30",
+                "min_agua": "0",
+                "max_abono": "45",
+                "min_abono": "20",
+                "efectoWP":"4",
+                "efectoWN":"-5",
+                "efectoAP":"6",
+                "efectoAN":"-5",
+                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\CulantroMediano.jpg"
+                
+            },
+            {
+                "nivel": "GRANDE",
+                "min_dias": "20",
+                "max_dias": "30",
+                "max_vida": "120",
+                "min_vida": "85",
+                "max_agua": "45",
+                "min_agua": "0",
+                "max_abono":"60",
+                "min_abono": "40",
+                "efectoWP":"6",
+                "efectoWN":"-7",
+                "efectoAP":"8",
+                "efectoAN":"-9",
+                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\CulantroGrande.jpg"
+            },
+            {
+                "nivel": "MUERTA",
+                "min_dias": "0",
+                "max_dias": "0",
+                "max_vida": "-50",
+                "min_vida": "-20",
+                "max_agua": "-50",
+                "min_agua": "-20",
+                "max_abono":"-50",
+                "min_abono": "-20",
+                "efectoWP":"0",
+                "efectoWN":"0",
+                "efectoAP":"0",
+                "efectoAN":"0",
+                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\CulantroMuerto.jpg"
+            }
+        ]
+    },
+
+    {
+            "nombre":"Limonero",
+            "vida":"150",
+            "consumo": "10",
+            "dias": "150",
+            "estados":[{
+                "nivel": "ALMACIGO",
+                "time": "20",
+                "min_dias": "0",
+                "max_dias": "10",
+                "max_vida": "110",
+                "min_vida": "55",
+                "max_agua": "35",
+                "min_agua": "0",
+                "max_abono": "35",
+                "min_abono": "10",
+                "efectoWP":"4",
+                "efectoWN":"-5",
+                "efectoAP":"4",
+                "efectoAN":"-5",
+                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\LimonAlmacigo.jpg"
+
+            },
+            {
+                "nivel": "MEDIANA",
+                "time": "45",
+                "min_dias": "10",
+                "max_dias": "20",
+                "max_vida": "110",
+                "min_vida": "70",
+                "max_agua": "40",
+                "min_agua": "0",
+                "max_abono": "40",
+                "min_abono": "20",
+                "efectoWP":"5",
+                "efectoWN":"-6",
+                "efectoAP":"7",
+                "efectoAN":"-8",
+                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\LimonMediano.jpg"
+                
+            },
+            {
+                "nivel": "GRANDE",
+                "time": "80",
+                "min_dias": "20",
+                "max_dias": "30",
+                "max_vida": "120",
+                "min_vida": "85",
+                "max_agua": "50",
+                "min_agua": "20",
+                "max_abono":"60",
+                "min_abono": "45",
+                "efectoWP":"6",
+                "efectoWN":"-6",
+                "efectoAP":"9",
+                "efectoAN":"-10",
+                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\LimonGrande.jpg"
+            },
+            {
+                "nivel": "MUERTA",
+                "min_dias": "0",
+                "max_dias": "0",
+                "max_vida": "-50",
+                "min_vida": "-20",
+                "max_agua": "-50",
+                "min_agua": "-20",
+                "max_abono":"-50",
+                "min_abono": "-20",
+                "efectoWP":"0",
+                "efectoWN":"0",
+                "efectoAP":"0",
+                "efectoAN":"0",
+                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\LimonMuerto.jpg"
+            }
+        ]
+    },
+        {
+            "nombre":"Cactus",
+            "vida":"200",
+            "consumo": "10",
+            "dias": "365",
+            "estados":[{
+                "nivel": "ALMACIGO",
+                "min_dias": "0",
+                "max_dias": "10",
+                "max_vida": "150",
+                "min_vida": "60",
+                "max_agua": "20",
+                "min_agua": "0",
+                "max_abono": "30",
+                "min_abono": "10",
+                "efectoWP":"2",
+                "efectoWN":"-4",
+                "efectoAP":"3",
+                "efectoAN":"-4",
+                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\CactusAlmacigo.jpg"
+
+            },
+            {
+                "nivel": "MEDIANA",
+                "min_dias": "20",
+                "max_dias": "30",
+                "max_vida": "150",
+                "min_vida": "70",
+                "max_agua": "30",
+                "min_agua": "0",
+                "max_abono": "35",
+                "min_abono": "20",
+                "efectoWP": "3",
+                "efectoWN":"-6",
+                "efectoAP":"7",
+                "efectoAN":"-6",
+                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\CactusMediano.jpg"
+                
+            },
+            {
+                "nivel": "GRANDE",
+                "min_dias": "20",
+                "max_dias": "30",
+                "max_vida": "150",
+                "min_vida": "80",
+                "max_agua": "35",
+                "min_agua": "0",
+                "max_abono":"40",
+                "min_abono": "25",
+                "efectoWP":"5",
+                "efectoWN":"-8",
+                "efectoAP":"5",
+                "efectoAN":"-8",
+                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\CactusGrande.jpg"
+            },
+            {
+                "nivel": "MUERTA",
+                "min_dias": "0",
+                "max_dias": "0",
+                "max_vida": "-50",
+                "min_vida": "-20",
+                "max_agua": "-50",
+                "min_agua": "-20",
+                "max_abono":"-50",
+                "min_abono": "-20",
+                "efectoWP":"0",
+                "efectoWN":"0",
+                "efectoAP":"0",
+                "efectoAN":"0",
+                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\CactusMuerto.jpg"
+            }
+            ]
+        }
+     ]
+}
+              
