@@ -19,11 +19,7 @@ public class StatusManager implements IObserver, IConstants {
 	
 	public StatusManager() {
 		garden = new ArrayList<Plant>();
-	}
-	// la lista de reglas de abono para todas los tipos de planta que viene del json
-	// la lista de reglas de agua para todos los tipos de planta que viene del json
-	// lo mismo para la temperatura...
-	
+	}	
 	
 	public void crearPlanta(int index) throws FileNotFoundException, IOException, ParseException {
 		garden.add(reader.cargarPlant(index));

@@ -26,18 +26,5 @@ public class program {
 		MainFrameController controller = new MainFrameController(manager, sim, clima);
 		sim.addObserver(controller);
 		MainFrame window = new MainFrame("Prueba", controller);
-		/*
-		manager.crearPlanta(0);
-		
-		Thread simThread = new Thread(sim);
-		simThread.start();
-		
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		manager.crearPlanta(1);
-		*/
 		}
 	}

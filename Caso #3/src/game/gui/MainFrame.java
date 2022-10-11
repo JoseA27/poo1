@@ -44,11 +44,10 @@ public class MainFrame extends JFrame{
 		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
-		this.setBounds(0, 0, 900, 600);
+		this.setBounds(0, 0, 875, 700);
 		this.setLocationRelativeTo(null);
 		this.setLayout(new BorderLayout(10,5)); // this allows this frame to locate the components with freedom in the screen
 		this.setBackground(Color.GREEN);
-		//this.setTitle("Caso 3");
 		this.initComponents();
 		
 		this.setVisible(true);	
