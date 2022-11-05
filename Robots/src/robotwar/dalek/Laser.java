@@ -26,7 +26,7 @@ public class Laser extends Weapon{
 		System.out.print(parametros.get(1));
 		*/
 		
-		List<Integer> lista = new ArrayList<Integer>();
+		ArrayList<Integer> lista = new ArrayList<Integer>();
 		lista.add(pLevel);
 		lista.stream().filter(x->x==1 || x==1)
 			.forEach(System.out.println(x));
