@@ -6,19 +6,26 @@ import java.time.LocalTime;
 import robotwar.common.IConstants;
 
 public class IRobot implements IConstants {
-	private int energy;
-	private int posX;
-	private int posY;
-	private int strikeIndex;
-	private int weaponIndex;
-	private Weapon weapons[];
-	private Weapon strikes[];
-	private DamageLevel directionsdamage[];
+	protected int energy;
+	protected int posX;
+	protected int posY;
+	protected int strikeIndex;
+	protected int weaponIndex;
+	protected Weapon weapons[];
+	protected Weapon strikes[];
+	protected DamageLevel directionsdamage[];
+	protected ORIENTATION currentOrientation;
+
+	public IRobot() {
+		this(ORIENTATION.EAST);
+	}
 	
-	public IRobot(Weapon pdirections, DamageLevel pweapons) {
+	public IRobot(ORIENTATION pOrientation) {
 		directionsdamage = new DamageLevel[MOVEMENT.values().length];
 		weapons = new Weapon[WEAPONS_PER_ROBOT];
 		strikes = new Weapon[STRIKES_PER_ROBOT];
+		
+		this.currentOrientation = pOrientation;
 		
 		strikeIndex = 0;
 		weaponIndex = 0;
@@ -37,11 +44,11 @@ public class IRobot implements IConstants {
 	}
 	
 	public void hit(int pStrikeId, LocalTime pActionTime, Graphics g ) {
-		
+		this.weapons[pStrikeId].fire(this.posX, this.posY, this.currentOrientation);		
 	}
 	
 	public void fire(int pWeaponId, LocalTime pActionTime, Graphics g) {
-		
+		this.weapons[pWeaponId].fire(this.posX, this.posY, this.currentOrientation);
 	}
 	
 	/*

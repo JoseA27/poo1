@@ -1,26 +1,27 @@
 package robotwar.main;
-
+import robotwar.common.robotbase.ORIENTATION;
+import robotwar.dalek.*;
+import robotwar.gui.Ejemplo_Move_2;
 public class program {
 	public static void main(String args[]) {
-		Constants.VALOR_CONSTANTE = 100;
-		try {
-			StatusManager manager = new StatusManager();
-			Simulator sim = new Simulator(manager);
-			
-			sim.addObserver(manager);
-			
-			Thread simThread = new Thread(sim);
-			simThread.start();
-			
-			sim.updateWeather(50, 10);
-					
-		} catch (Exception ex) {
-			System.out.println(ex.getMessage());
-			ex.printStackTrace();
-			// que voy hacer cuando se cae...
-		}
-		finally {
-			System.out.println("Luego de una excepcion el código brinca al finally si o si, el finally es opcional");
-		}
+		Dalek dalek = new Dalek();
+		Laser laser = new Laser();
+		Laser laser2 = new Laser();
+		Laser laser3 = new Laser();
+		dalek.addWeapon(laser);
+		dalek.addStrike(laser2);
+		dalek.addStrike(laser3);
+		//laser.fire(0, 0, null);
+		//laser.hitDamage(3);
+		dalek.damage(6);
+		dalek.damage(3);
+	
+		System.out.println(laser.getDamageLevel());
+		System.out.println(dalek.getEnergy());
+		/*
+		//Ejemplo_Move ejemplo = new Ejemplo_Move();
+		Ejemplo_Move_2 ejemplo2 = new Ejemplo_Move_2();
+		//ejemplo.Simular();
+		ejemplo2.Simular();*/
 	}
 }

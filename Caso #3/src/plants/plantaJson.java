@@ -25,7 +25,7 @@ public class plantaJson {
 	public Plant cargarPlant(int index) throws FileNotFoundException, IOException, ParseException {
 		JSONParser parser = new JSONParser();
 	
-		Object objeto = parser.parse(new FileReader("C:\\Users\\Usuario\\eclipse-workspace\\Caso #3\\plantas.json"));
+		Object objeto = parser.parse(new FileReader("C:\\Users\\josea\\Documents\\GitHub\\poo1\\Caso #3\\plantas.json"));
 		JSONObject json = (JSONObject)objeto;
 		
 		JSONArray lista= (JSONArray)json.get("Plantas");
@@ -65,7 +65,7 @@ public class plantaJson {
 	}
 		public ArrayList<Seasons> cargarSeasons() throws FileNotFoundException, IOException, ParseException {
 			JSONParser parser = new JSONParser();
-			Object objeto = parser.parse(new FileReader("C:\\Users\\Usuario\\eclipse-workspace\\Caso #3\\seasons.json"));
+			Object objeto = parser.parse(new FileReader("C:\\Users\\josea\\Documents\\GitHub\\poo1\\Caso #3\\seasons.json"));
 			JSONObject json = (JSONObject)objeto;
 			JSONArray lista= (JSONArray)json.get("Seasons");
 			

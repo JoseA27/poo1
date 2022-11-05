@@ -19,7 +19,7 @@
                 "efectoWN":"-4",
                 "efectoAP":"5",
                 "efectoAN":"-4",
-                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\CulantroAlmacigo.jpg"
+                "imagen": "C:\Users\josea\Documents\GitHub\poo1\Caso #3\src\plants\CulantroAlmacigo.jpg"
 
             },
             {
@@ -36,7 +36,7 @@
                 "efectoWN":"-5",
                 "efectoAP":"6",
                 "efectoAN":"-5",
-                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\CulantroMediano.jpg"
+                "imagen": "C:\Users\josea\Documents\GitHub\poo1\Caso #3\src\plants\CulantroMediano.jpg"
                 
             },
             {
@@ -53,7 +53,7 @@
                 "efectoWN":"-7",
                 "efectoAP":"8",
                 "efectoAN":"-9",
-                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\CulantroGrande.jpg"
+                "imagen": "C:\Users\josea\Documents\GitHub\poo1\Caso #3\src\plants\CulantroGrande.jpg"
             },
             {
                 "nivel": "MUERTA",
@@ -69,7 +69,7 @@
                 "efectoWN":"0",
                 "efectoAP":"0",
                 "efectoAN":"0",
-                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\CulantroMuerto.jpg"
+                "imagen": "C:\Users\josea\Documents\GitHub\poo1\Caso #3\src\plants\CulantroMuerto.jpg"
             }
         ]
     },
@@ -94,7 +94,7 @@
                 "efectoWN":"-5",
                 "efectoAP":"4",
                 "efectoAN":"-5",
-                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\LimonAlmacigo.jpg"
+                "imagen": "C:\Users\josea\Documents\GitHub\poo1\Caso #3\src\plants\LimonAlmacigo.jpg"
 
             },
             {
@@ -112,7 +112,7 @@
                 "efectoWN":"-6",
                 "efectoAP":"7",
                 "efectoAN":"-8",
-                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\LimonMediano.jpg"
+                "imagen": "C:\Users\josea\Documents\GitHub\poo1\Caso #3\src\plants\LimonMediano.jpg"
                 
             },
             {
@@ -130,7 +130,7 @@
                 "efectoWN":"-6",
                 "efectoAP":"9",
                 "efectoAN":"-10",
-                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\LimonGrande.jpg"
+                "imagen": "C:\Users\josea\Documents\GitHub\poo1\Caso #3\src\plants\LimonGrande.jpg"
             },
             {
                 "nivel": "MUERTA",
@@ -146,7 +146,7 @@
                 "efectoWN":"0",
                 "efectoAP":"0",
                 "efectoAN":"0",
-                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\LimonMuerto.jpg"
+                "imagen": "C:\Users\josea\Documents\GitHub\poo1\Caso #3\src\plants\LimonMuerto.jpg"
             }
         ]
     },
@@ -169,7 +169,7 @@
                 "efectoWN":"-4",
                 "efectoAP":"3",
                 "efectoAN":"-4",
-                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\CactusAlmacigo.jpg"
+                "imagen": "C:\Users\josea\Documents\GitHub\poo1\Caso #3\src\plants\CactusAlmacigo.jpg"
 
             },
             {
@@ -186,7 +186,7 @@
                 "efectoWN":"-6",
                 "efectoAP":"7",
                 "efectoAN":"-6",
-                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\CactusMediano.jpg"
+                "imagen": "C:\Users\josea\Documents\GitHub\poo1\Caso #3\src\plants\CactusMediano.jpg"
                 
             },
             {
@@ -203,7 +203,7 @@
                 "efectoWN":"-8",
                 "efectoAP":"5",
                 "efectoAN":"-8",
-                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\CactusGrande.jpg"
+                "imagen": "C:\Users\josea\Documents\GitHub\poo1\Caso #3\src\plants\CactusGrande.jpg"
             },
             {
                 "nivel": "MUERTA",
@@ -219,10 +219,83 @@
                 "efectoWN":"0",
                 "efectoAP":"0",
                 "efectoAN":"0",
-                "imagen": "C:\Users\Usuario\eclipse-workspace\Prueba\src\plants\CactusMuerto.jpg"
+                "imagen": "C:\Users\josea\Documents\GitHub\poo1\Caso #3\src\plants\CactusMuerto.jpg"
             }
             ]
-        }
+        },
+        {
+            "nombre":"Zanahoria",
+            "vida":"200",
+            "consumo": "10",
+            "dias": "365",
+            "estados":[{
+                "nivel": "ALMACIGO",
+                "min_dias": "0",
+                "max_dias": "10",
+                "max_vida": "150",
+                "min_vida": "60",
+                "max_agua": "20",
+                "min_agua": "0",
+                "max_abono": "30",
+                "min_abono": "10",
+                "efectoWP":"2",
+                "efectoWN":"-4",
+                "efectoAP":"3",
+                "efectoAN":"-4",
+                "imagen": "C:\Users\josea\Documents\GitHub\poo1\Caso #3\src\plants\ZanahoriaAlmacigo.jpg"
+
+            },
+            {
+                "nivel": "MEDIANA",
+                "min_dias": "20",
+                "max_dias": "30",
+                "max_vida": "150",
+                "min_vida": "70",
+                "max_agua": "30",
+                "min_agua": "0",
+                "max_abono": "35",
+                "min_abono": "20",
+                "efectoWP": "3",
+                "efectoWN":"-6",
+                "efectoAP":"7",
+                "efectoAN":"-6",
+                "imagen": "C:\Users\josea\Documents\GitHub\poo1\Caso #3\src\plants\ZanahoriaMediano.jpg"
+                
+            },
+            {
+                "nivel": "GRANDE",
+                "min_dias": "20",
+                "max_dias": "30",
+                "max_vida": "150",
+                "min_vida": "80",
+                "max_agua": "35",
+                "min_agua": "0",
+                "max_abono":"40",
+                "min_abono": "25",
+                "efectoWP":"5",
+                "efectoWN":"-8",
+                "efectoAP":"5",
+                "efectoAN":"-8",
+                "imagen": "C:\Users\josea\Documents\GitHub\poo1\Caso #3\src\plants\ZanahoriaGrande.jpg"
+            },
+            {
+                "nivel": "MUERTA",
+                "min_dias": "0",
+                "max_dias": "0",
+                "max_vida": "-50",
+                "min_vida": "-20",
+                "max_agua": "-50",
+                "min_agua": "-20",
+                "max_abono":"-50",
+                "min_abono": "-20",
+                "efectoWP":"0",
+                "efectoWN":"0",
+                "efectoAP":"0",
+                "efectoAN":"0",
+                "imagen": "C:\Users\josea\Documents\GitHub\poo1\Caso #3\src\plants\ZanahoriaMuerto.jpg"
+            }
      ]
+    }
+    ]
 }
               
