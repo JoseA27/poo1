@@ -18,6 +18,7 @@ public class IRobot implements IConstants {
 
 	public IRobot() {
 		this(ORIENTATION.EAST);
+		System.out.println(1122);
 	}
 	
 	public IRobot(ORIENTATION pOrientation) {

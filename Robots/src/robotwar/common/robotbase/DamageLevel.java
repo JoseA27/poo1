@@ -1,8 +1,10 @@
 package robotwar.common.robotbase;
 
+import java.util.Arrays;
+
 public class DamageLevel {
-	protected double damageLevel;
-	protected  boolean enabled;
+	private double damageLevel;
+	private boolean enabled;
 	
 	public DamageLevel() {
 		this.damageLevel = 100.0;
@@ -14,29 +16,10 @@ public class DamageLevel {
 	}
 
 	public void hitDamage(int pLevel) {
-		if(this.isEnabled()==false) {
-			return;
-		}
-		//Si es de nivel 1, afecta a la energia directamente, no al arma o direccion
-		/* 
-		if(pLevel<3) 
-			this.damageLevel--;
-		*/
-		if(pLevel>=3&& pLevel<=5) {
-			this.damageLevel-=(this.getDamageLevel()*(pLevel*0.20));
-		}
-		if(pLevel>=6 && pLevel<=8){
-			this.damageLevel-=(this.getDamageLevel()*(pLevel*0.30));
-		}
-		if(pLevel==9 || pLevel==10) {
-			this.enabled=false;
-			return;
-		}
-		if(this.getDamageLevel()<=0) {
-			this.enabled=false;
-		}
-		// dado el nivel saco el % de daño, lo rebajo
-		// evaluo si llegue a cero o menos, pongo el enabled en false
+		int[][] array = {{1,2},{3,4,5,6,7,8,9,10}};
+		float [] percent = {1.0f,1.0f,2.0f,0.4f,0.6f,0.3f,0.6f,0.9f,1.0f,1.0f};
+		Arrays.stream(array[0]).filter(x->x==pLevel).forEach(x->this.damageLevel-=percent[pLevel-1]);
+		Arrays.stream(array[1]).filter(x->x==pLevel).forEach(x->this.damageLevel-=this.getDamageLevel()*percent[pLevel-1]);
 	}
 
 	public boolean isEnabled() {
