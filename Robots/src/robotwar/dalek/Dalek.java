@@ -36,7 +36,7 @@ public class Dalek extends IRobot{
 			break;
 		case 3:
 			System.out.println("ORIENTATION");
-			this.getDamageOrientation(this.getDamageLevelOrientation().length).hitDamage(pLevel);;
+			this.getDamageOrientation(this.getDamageLevelOrientation().length-1).hitDamage(pLevel);;
 			break;
 		}
 	}

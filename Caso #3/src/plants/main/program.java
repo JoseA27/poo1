@@ -15,8 +15,6 @@ import plants.statuses.StatusManager;
 public class program {
 	public static void main(String args[]) throws FileNotFoundException, IOException, ParseException {
 		
-		
-		
 		StatusManager manager = new StatusManager();
 		Simulator sim = new Simulator(manager);
 		StatusClimateManager clima = new StatusClimateManager();

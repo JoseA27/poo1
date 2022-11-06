@@ -15,8 +15,7 @@ public class StatusManager implements IObserver, IConstants {
 	private ArrayList<Plant> garden;
 	private plantaJson reader= new plantaJson();
 	private ArrayList<String> imagenes = new ArrayList<String>(); 
-	
-	
+
 	public StatusManager() {
 		garden = new ArrayList<Plant>();
 	}	
