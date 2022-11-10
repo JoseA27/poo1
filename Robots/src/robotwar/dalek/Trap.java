@@ -1,25 +1,22 @@
-package robotwar.common.robotbase;
+package robotwar.dalek;
 
-public abstract class Weapon extends DamageLevel {
+import robotwar.common.robotbase.Weapon;
+
+public class Trap{
 	protected int posX;
 	protected int posY;
 	protected int speed;
 	protected int level;
-	protected int attackDistance;
+
+	private boolean enable;
 	
-	public Weapon(int pSpeed, int pLevel, int pAttackDistance) {
-		this.speed = pSpeed;
-		this.level = pLevel;
-		this.attackDistance = pAttackDistance;
+	public boolean isEnable() {
+		return enable;
 	}
-	
-	public void fire(int pPosX, int pPosY, ORIENTATION pDirection) {
-		if (this.isEnabled()) {
-			triggerWeapon(pPosX, pPosY, pDirection);
-		}
+
+	public void setEnable(boolean enable) {
+		this.enable = enable;
 	}
-		
-	protected abstract void triggerWeapon(int pPosX, int pPosY, ORIENTATION pDirection);
 
 	public int getPosX() {
 		return posX;

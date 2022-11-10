@@ -11,7 +11,7 @@ import robotwar.common.robotbase.*;
 public class Laser extends Weapon{
 	
 	public Laser() {
-		super(100, 3);
+		super(100, 3,4000);
 	}
 
 	public void triggerWeapon(int pPosX, int pPosY, ORIENTATION pDirection) {

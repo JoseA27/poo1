@@ -184,7 +184,7 @@ public class Ejemplo_Move_2 implements KeyListener {
 				try {
 					mostrarImagen(panel1, x, y, picLabel);
 				
-					Thread.sleep(20);
+					Thread.sleep(1);
 					//Thread.sleep(500);
 				}
 				catch (Exception ex) {

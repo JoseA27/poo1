@@ -1,11 +1,13 @@
 package robotwar.communication;
 
+import java.io.DataOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 public class SocketServer implements Runnable {
-	private final int PORT_NUMBER = 10000;
+	private final int PORT_NUMBER = 5555;
 	private boolean listening;
+	private DataOutputStream out;
 	
 	public SocketServer() {
 		listening = true;
@@ -31,6 +33,8 @@ public class SocketServer implements Runnable {
 				// la conexion del que se acaba de conectar
 				Socket connection = socketListener.accept();
 				SocketClient client = new SocketClient(connection);
+				out = new DataOutputStream (client.getBinOutput());
+				out.writeUTF("YO SE QUE EN EL AMOR SOY UN FARSANTE, BEBE");
 			}
 			
 		} catch (Exception ex) {

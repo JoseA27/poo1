@@ -1,5 +1,7 @@
 package robotwar.common;
 
+import java.awt.Graphics;
+
 public interface IConstants {
 	/* ARENA */
 	public static final int ARENA_WIDTH = 1200;
@@ -10,6 +12,5 @@ public interface IConstants {
 	public static final int ENERGY_PER_MOVEMENT = 1;
 	public static final int WEAPONS_PER_ROBOT = 1;
 	public static final int STRIKES_PER_ROBOT = 2;
-	
 	
 }
