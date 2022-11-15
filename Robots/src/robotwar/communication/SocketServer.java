@@ -34,7 +34,6 @@ public class SocketServer implements Runnable {
 				Socket connection = socketListener.accept();
 				SocketClient client = new SocketClient(connection);
 				out = new DataOutputStream (client.getBinOutput());
-				out.writeUTF("YO SE QUE EN EL AMOR SOY UN FARSANTE, BEBE");
 			}
 			
 		} catch (Exception ex) {

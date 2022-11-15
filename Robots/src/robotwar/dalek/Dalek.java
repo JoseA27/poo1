@@ -23,39 +23,52 @@ public class Dalek extends IRobot{
 	private Image imagen = new ImageIcon("C:\\Users\\josea\\Desktop\\Imagenes poo\\Dalek.png").getImage();
 	private Image bg = new ImageIcon("C:\\Users\\josea\\Desktop\\Imagenes poo\\Fondo.jpg").getImage();
 	private int pixelDistance;
+	
 	public Dalek() {
 		this.agregarDamageDirection();
 		this.setPixelDistance(0);
 		this.setEnergy(100);
+		this.setSpeed(90);
 	}
 	
-	public Dalek(ORIENTATION pOrientation) {
-		super(pOrientation);
+	public Dalek(ORIENTATION pOrientation, int speed) {
+		super(pOrientation, speed);
 		this.agregarDamageDirection();
 		this.setPixelDistance(0);
+		this.setEnergy(100);
 	}
 
 	@Override
 	public void move(MOVEMENT pMove, LocalTime pActionTime, Graphics g) {
+		if(this.getEnergy()<0) {
+			return;
+		}
 		this.updateOrientation(pMove);
 		this.validarDistanciaRecorrida();
+		int distancia = (int) (this.getSpeed()*0.1);
 		if(pMove==MOVEMENT.LEFT) {
-			this.setPosX(this.getPosX()-3);
+			this.setPosX(this.getPosX()-distancia);
 		}
 		if(pMove==MOVEMENT.UP) {
-			this.setPosY(this.getPostY()-3);
+			this.setPosY(this.getPostY()-distancia);
 		}
 		if(pMove==MOVEMENT.RIGHT) {
-			this.setPosX(this.getPosX()+3);
+			this.setPosX(this.getPosX()+distancia);
 		}
 		if(pMove==MOVEMENT.DOWN) {
-			this.setPosY(this.getPostY()+3);
+			this.setPosY(this.getPostY()+distancia);
 		}
-		this.validarMove();
-		g.drawImage(bg,0,0,null);
-		g.drawImage(imagen, this.getPosX(), this.getPostY(), null);
+		
+		this.refreshMove(pMove, pActionTime, g);
 	}
-	
+	@Override
+	protected void refreshMove(MOVEMENT pMove, LocalTime pActionTime, Graphics g) {
+		this.validarMove();
+		System.out.println(this.getPostY()+" + "+this.getPosX());
+		//g.drawImage(imagen, this.getPosX(), this.getPostY(), null);
+		//g.dispose();
+		
+	}
 	@Override
 	public void damage(int pLevel) {
 		int randomNum = ThreadLocalRandom.current().nextInt(1, 3 + 1);
@@ -74,10 +87,7 @@ public class Dalek extends IRobot{
 			break;
 		}
 	}
-	@Override
-	public void hit(int pStrikeId, LocalTime pActionTime, Graphics g ) {
-		
-	}
+	
 	
 	public void updateOrientation(MOVEMENT pMove) {
 		MOVEMENT[][] stream= {{MOVEMENT.UP},{MOVEMENT.DOWN},{MOVEMENT.LEFT},{MOVEMENT.RIGHT}};
@@ -110,13 +120,22 @@ public class Dalek extends IRobot{
 	public void validarDistanciaRecorrida(){
 		System.out.println("Pixel: "+this.getPixelDistance());
 		this.setPixelDistance(this.getPixelDistance()+1);
+		
 		if(this.getPixelDistance()>IConstants.ROBOT_MOVEMENT_LENGTH) {
 			this.setPixelDistance(0);
 			this.setEnergy(this.getEnergy()-1);
 			System.out.println("Energia"+this.getEnergy());
 		}
-		
 	}
+	
+	//Attacks
+	
+	public void ataque(int pStrikeId, Graphics g ) {
+		Weapon arma = this.getStrike(pStrikeId);
+		g.drawImage(arma.getImage(),arma.getPosX(), this.getPostY(), null);
+		hit(pStrikeId, null, g);
+	}
+	
 	public void setEnergy(int energia) {
 		this.energy=energia;
 	}
@@ -175,6 +194,12 @@ public class Dalek extends IRobot{
 
 	public void setPixelDistance(int pixelDistance) {
 		this.pixelDistance = pixelDistance;
+	}
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
+	public int getSpeed() {
+		return this.speed;
 	}
 	
 }

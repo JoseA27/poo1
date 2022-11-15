@@ -24,5 +24,14 @@ public class MainController implements IConstants{
 	public void setDalek(Dalek dalek) {
 		this.dalek = dalek;
 	}
-	
+	public int getXDalek(MOVEMENT pmove, Graphics g) {
+		dalek.move(pmove, null, g);
+		System.out.println(dalek.getPosX());
+		return dalek.getPosX();
+	}
+	public int getYDalek(MOVEMENT pmove, Graphics g) {
+		dalek.move(pmove, null, g);
+		System.out.println(dalek.getPostY());
+		return dalek.getPostY();
+	}
 }

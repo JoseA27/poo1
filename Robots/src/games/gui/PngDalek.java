@@ -19,13 +19,14 @@ public class PngDalek extends JPanel{
 	
 	@Override
 	  protected void paintComponent(Graphics g) {
+		g.drawImage(imagen, 0, 0, null);
+		repaint();
 	}
 	
 	@Override
 	public void paint(Graphics g) {
 		super.paint(g);
-		g.drawImage(imagen, 0, 0, null);
-		repaint();
+		
 	}
 
 }

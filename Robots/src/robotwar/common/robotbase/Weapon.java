@@ -1,5 +1,6 @@
 package robotwar.common.robotbase;
 
+
 public abstract class Weapon extends DamageLevel {
 	protected int posX;
 	protected int posY;

@@ -30,7 +30,9 @@ public class program {
 		
 		MainController controller = new MainController();
 		MainIU window = new MainIU("Prueba", controller,IConstants.ARENA_WIDTH, IConstants.ARENA_HEIGTH);
-		Dalek dalek = new Dalek(ORIENTATION.EAST);
+		Dalek dalek = new Dalek(ORIENTATION.EAST, 200);
+	
+
 		controller.setDalek(dalek);
 		//Ejemplo_Move_2 ejemplo2 = new Ejemplo_Move_2();
 		//ejemplo.Simular();

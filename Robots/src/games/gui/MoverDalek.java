@@ -17,21 +17,27 @@ public class MoverDalek extends JPanel{
 
 	private static final long serialVersionUID = 1L;
 	public static String rutaImagenes = "C:\\Users\\josea\\Desktop\\Imagenes poo\\";
-	
 	public MoverDalek() {
+		this.setLayout(null);
 	}
 	
-	/*
 	@Override
 	  protected void paintComponent(Graphics g) {
 		  super.paintComponent(g);
 		  Image imagen = new ImageIcon(rutaImagenes+"Fondo.jpg").getImage();
 		  g.drawImage(imagen, 0, 0, null);
-	}*/
+		
+	}
 	
 	@Override
 	public void paint(Graphics g) {
-		super.paint(g);
+		this.paintComponent(g);
+		//super.paint(g);
 	}
+	/*
+	public JLabel getLabel() {
+		return label;
+	}
+	*/
 
 }
