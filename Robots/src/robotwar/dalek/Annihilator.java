@@ -1,22 +1,17 @@
 package robotwar.dalek;
 
 import java.awt.Image;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 import javax.swing.ImageIcon;
 
-import robotwar.common.robotbase.*;
+import robotwar.common.robotbase.ORIENTATION;
+import robotwar.common.robotbase.Weapon;
 
-public class Laser extends Weapon{
-	
+public class Annihilator extends Weapon{
 	private Image imagen = new ImageIcon("C:\\Users\\josea\\Desktop\\Imagenes poo\\Laser.jpg").getImage();
 	
-	public Laser() {
-		super(100, 3,1000);
+	public Annihilator() {
+		super(30, 9, 100);
 	}
 	public void triggerWeapon(int pPosX, int pPosY, ORIENTATION pDirection) {
 		

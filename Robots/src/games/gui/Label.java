@@ -22,7 +22,7 @@ public class Label extends JLabel{
 	@Override
 	public void paint(Graphics g) {
 		super.paint(g);
-		repaint();
+		//repaint();
 	}
 	public int getX() {
 		return x;

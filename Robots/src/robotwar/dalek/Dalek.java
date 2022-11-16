@@ -65,8 +65,8 @@ public class Dalek extends IRobot{
 	protected void refreshMove(MOVEMENT pMove, LocalTime pActionTime, Graphics g) {
 		this.validarMove();
 		System.out.println(this.getPostY()+" + "+this.getPosX());
-		//g.drawImage(imagen, this.getPosX(), this.getPostY(), null);
-		//g.dispose();
+		g.drawImage(imagen, this.getPosX(), this.getPostY(), null);
+		g.dispose();
 		
 	}
 	@Override
@@ -134,6 +134,12 @@ public class Dalek extends IRobot{
 		Weapon arma = this.getStrike(pStrikeId);
 		g.drawImage(arma.getImage(),arma.getPosX(), this.getPostY(), null);
 		hit(pStrikeId, null, g);
+	}
+	
+	public void disparo(int pWeaponId, Graphics g ) {
+		Weapon arma = this.getWeapon(pWeaponId);
+		g.drawImage(arma.getImage(),arma.getPosX(), this.getPostY(), null);
+		fire(pWeaponId, null, g);
 	}
 	
 	public void setEnergy(int energia) {
