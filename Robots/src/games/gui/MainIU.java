@@ -1,23 +1,22 @@
 package games.gui;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.time.LocalTime;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.Timer;
 
 import games.controller.MainController;
 import robotwar.common.IConstants;
 import robotwar.common.robotbase.MOVEMENT;
 
-public class MainIU  extends JFrame implements IConstants, ActionListener, KeyListener{
+public class MainIU  extends JFrame implements IConstants, ActionListener, KeyListener, Runnable{
 
 	private static final long serialVersionUID = 1L;
 	public static String rutaImagenes = "C:\\Users\\josea\\Desktop\\Imagenes poo\\";
@@ -26,14 +25,14 @@ public class MainIU  extends JFrame implements IConstants, ActionListener, KeyLi
 	private PanelDalek panel;
 	private panel background;
 	private MoverDalek mover;
-	private Timer timer = new Timer(5,this);
+	//private Timer timer = new Timer(5,this);
 
 	
 	public MainIU(String pTitle, MainController pController, int witdh, int height) {
 		super(pTitle);
 		controller = pController;
 		controller.setWindow(this);
-		timer.start();
+		//timer.start();
 		
 		this.setSize(witdh,height);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -66,25 +65,33 @@ public class MainIU  extends JFrame implements IConstants, ActionListener, KeyLi
 	
 	@Override
 	public void keyPressed(KeyEvent e) {
-	
 		Graphics g = mover.getGraphics();
 		int c = e.getKeyCode();
 		if(c == KeyEvent.VK_LEFT) {
-			 controller.moveDalek(MOVEMENT.LEFT, g);
+			 controller.moveDalek(MOVEMENT.LEFT,LocalTime.now(), g);
 		}
 		if(c == KeyEvent.VK_UP) {
-			controller.moveDalek(MOVEMENT.UP, g);
+			controller.moveDalek(MOVEMENT.UP, LocalTime.now(),g);
 		}
 		if(c == KeyEvent.VK_RIGHT) {
-			controller.moveDalek(MOVEMENT.RIGHT, g);
+			controller.moveDalek(MOVEMENT.RIGHT, LocalTime.now(),g);
 		}
 		if(c == KeyEvent.VK_DOWN) {
-			controller.moveDalek(MOVEMENT.DOWN, g);
+			controller.moveDalek(MOVEMENT.DOWN, LocalTime.now(),g);
 		}
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+	}
+
+
+	@Override
+	public void run() {
+		
+		while(true) {
+		}
+		
 	}
 	
 }

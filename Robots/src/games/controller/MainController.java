@@ -1,6 +1,7 @@
 package games.controller;
 
 import java.awt.Graphics;
+import java.time.LocalTime;
 import java.util.Arrays;
 
 import games.gui.*;
@@ -15,8 +16,8 @@ public class MainController implements IConstants{
 	public void setWindow(MainIU pframe) {
 		controlledFrame= pframe;
 	}
-	public void moveDalek(MOVEMENT pmove, Graphics g) {
-		dalek.move(pmove, null, g);
+	public void moveDalek(MOVEMENT pmove, LocalTime pTime, Graphics g) {
+		dalek.move(pmove, pTime, g);
 	}
 	public Dalek getDalek() {
 		return dalek;
