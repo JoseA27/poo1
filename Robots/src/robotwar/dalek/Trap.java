@@ -1,23 +1,29 @@
 package robotwar.dalek;
 
+import java.awt.Image;
+
 import robotwar.common.robotbase.Weapon;
 
-public class Trap{
+public class Trap {
+	protected String ruta = "C:\\Users\\josea\\Desktop\\Imagenes poo\\";
+	protected Image imagen;
 	protected int posX;
 	protected int posY;
-	protected int speed;
+	protected int height;
+	protected int width;
 	protected int level;
 
-	private boolean enable;
+	public Trap() {
+		
+	}
+	public Trap(int x, int y, int pHeight, int pWidth, int pLevel) {
+		setPosX(x);
+		setPosY(y);
+		setHeight(pHeight);
+		setWidth(pWidth);
+		setLevel(pLevel);
+	}
 	
-	public boolean isEnable() {
-		return enable;
-	}
-
-	public void setEnable(boolean enable) {
-		this.enable = enable;
-	}
-
 	public int getPosX() {
 		return posX;
 	}
@@ -34,14 +40,6 @@ public class Trap{
 		this.posY = posY;
 	}
 
-	public int getSpeed() {
-		return speed;
-	}
-
-	public void setSpeed(int speed) {
-		this.speed = speed;
-	}
-
 	public int getLevel() {
 		return level;
 	}
@@ -49,4 +47,35 @@ public class Trap{
 	public void setLevel(int level) {
 		this.level = level;
 	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+	public String getRuta() {
+		return ruta;
+	}
+
+	public void setRuta(String ruta) {
+		this.ruta = ruta;
+	}
+	public Image getImagen() {
+		return imagen;
+	}
+	public void setImagen(Image imagen) {
+		this.imagen = imagen;
+	}
+	
 }

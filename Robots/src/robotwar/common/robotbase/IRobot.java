@@ -51,19 +51,13 @@ public abstract class IRobot implements IConstants {
 	protected abstract void refreshMove(MOVEMENT pMove, LocalTime pActionTime, Graphics g);
 	
 	public void hit(int pStrikeId, LocalTime pActionTime, Graphics g ) {
-		this.weapons[pStrikeId].fire(this.posX, this.posY, this.currentOrientation);		
+		this.strikes[pStrikeId].fire(this.posX, this.posY, this.currentOrientation);	
 	}
 	
 	public void fire(int pWeaponId, LocalTime pActionTime, Graphics g) {
 		this.weapons[pWeaponId].fire(this.posX, this.posY, this.currentOrientation);
 	}
 	
-	/*
-	 * @pLevel, número del nivel del arma que le acertó
-	 * este es el nivel del arma o golpe que le acertó a este robot
-	 * entonces ahora hay que dado el nivel escoger la regla que aplica
-	 * actualizar el damage respectivo
-	 */
 	public void damage(int pLevel) {
 		
 	}

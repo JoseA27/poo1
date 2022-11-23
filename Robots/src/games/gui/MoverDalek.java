@@ -24,7 +24,7 @@ public class MoverDalek extends JPanel{
 	@Override
 	  protected void paintComponent(Graphics g) {
 		  super.paintComponent(g);
-		  Image imagen = new ImageIcon(rutaImagenes+"Fondo.jpg").getImage();
+		  Image imagen = new ImageIcon(rutaImagenes+"Fondo3.png").getImage();
 		  g.drawImage(imagen, 0, 0, null);
 		
 	}
@@ -34,10 +34,4 @@ public class MoverDalek extends JPanel{
 		this.paintComponent(g);
 		//super.paint(g);
 	}
-	/*
-	public JLabel getLabel() {
-		return label;
-	}
-	*/
-
 }

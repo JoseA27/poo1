@@ -1,0 +1,6 @@
+Polimorfismo, 
+Singletone, factory, strategy, dependency
+Nada hardcodeado, nada alambrado, ancho y largo del panel.
+Armas individuales, remover ifs
+Herencia, polimorfismo
+Serializacion/Deserializacion

@@ -9,6 +9,7 @@ public class Observable {
 	private ExecutorService executorPool;
 	private static Observable self;
 	
+	
 	public Observable() {
 		self = this;
 		observers = new ArrayList<IObserver>();

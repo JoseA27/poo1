@@ -3,17 +3,13 @@ package robotwar.dalek;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
-import java.awt.event.KeyEvent;
 import java.io.Serializable;
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.stream.Stream;
 
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
 import robotwar.Colision.DamageReport;
@@ -23,13 +19,14 @@ import robotwar.common.robotbase.IRobot;
 import robotwar.common.robotbase.MOVEMENT;
 import robotwar.common.robotbase.ORIENTATION;
 import robotwar.common.robotbase.Weapon;
+import robotwar.dalek.Dalek;
 import robotwar.utils.IObserver;
 import robotwar.utils.Observable;
 
-public class Dalek extends IRobot implements IObserver, Serializable{
-	
+public class TecDigital extends IRobot implements IObserver, Serializable{
+
 	private static final long serialVersionUID = 1L;
-	private static Dalek dalek;
+	private static TecDigital tec;
 	private String ruta = "C:\\Users\\josea\\Desktop\\Imagenes poo\\";	
 	private HashMap <MOVEMENT, ORIENTATION> movementSet = new HashMap<MOVEMENT, ORIENTATION>(); 
 	private int pixelDistance;
@@ -37,14 +34,14 @@ public class Dalek extends IRobot implements IObserver, Serializable{
 	private int height = 145;
 	
 	
-	private Dalek() {
+	private TecDigital() {
 		this.agregarDamageDirection();
 		this.setPixelDistance(0);
 		this.setEnergy(100);
 		this.setSpeed(90);
 	}
 	
-	private Dalek(ORIENTATION pOrientation, int speed) {
+	private TecDigital(ORIENTATION pOrientation, int speed) {
 		super(pOrientation, speed);
 		this.agregarDamageDirection();
 		this.setPixelDistance(0);
@@ -54,11 +51,11 @@ public class Dalek extends IRobot implements IObserver, Serializable{
 		movementSet.put(MOVEMENT.RIGHT, ORIENTATION.EAST);
 		movementSet.put(MOVEMENT.LEFT, ORIENTATION.WEST);
 	}
-	public static Dalek getInstante() {
-		if (dalek==null) {
-			dalek = new Dalek(ORIENTATION.EAST, 100);
+	public static TecDigital getInstante() {
+		if (tec==null) {
+			tec = new TecDigital(ORIENTATION.EAST, 100);
 		}
-		return dalek;
+		return tec;
 	}
 	@Override
 	public void move(MOVEMENT pMove, LocalTime pActionTime, Graphics g) {
@@ -91,19 +88,18 @@ public class Dalek extends IRobot implements IObserver, Serializable{
 		int randomNum = ThreadLocalRandom.current().nextInt(1, 3 + 1);
 		switch(randomNum) {
 		case 1:
-			System.out.println("Strike");
+			System.out.println("asasasasassasa");
 			this.weapons[ThreadLocalRandom.current().nextInt(0,this.getWeaponIndex()+1)].getLevel();
 			break;
 		case 2:
-			System.out.println("Weapon");
+			System.out.println("mmmmmmmmmmmmmmmm");
 			this.strikes[ThreadLocalRandom.current().nextInt(0,this.getStrikeIndex()+1)].getLevel();
 			break;
 		case 3:
-			System.out.println("Tecla");
-			this.getDamageOrientation(ThreadLocalRandom.current().nextInt(0,3+1)).hitDamage(pLevel);
+			//this.getDamageOrientation(ThreadLocalRandom.current().nextInt(0,3+1)).hitDamage(pLevel);
 			break;
 		default:
-			this.getDamageOrientation(ThreadLocalRandom.current().nextInt(0,3+1)).hitDamage(pLevel);
+			//this.getDamageOrientation(ThreadLocalRandom.current().nextInt(0,3+1)).hitDamage(pLevel);
 			break;
 		}
 	}
@@ -135,6 +131,7 @@ public class Dalek extends IRobot implements IObserver, Serializable{
 		if(this.getPixelDistance()>IConstants.ROBOT_MOVEMENT_LENGTH) {
 			this.setPixelDistance(0);
 			this.setEnergy(this.getEnergy()-1);
+			System.out.println("Energia"+this.getEnergy());
 		}
 	}
 	
@@ -145,8 +142,9 @@ public class Dalek extends IRobot implements IObserver, Serializable{
 			return;
 		super.hit(pStrikeId, pActionTime, g);
 		Weapon arma = this.strikes[pStrikeId];
+		System.out.println(arma.getPosX());
 		g.setColor(Color.blue);
-		g.drawLine(this.getPosX(),this.getPostY(), (arma.getPosX()+this.posX), (arma.getPosY()+this.posY));
+		g.draw3DRect(this.getPosX(),this.getPostY(), (arma.getPosX()+this.posX), (arma.getPosY()+this.posY), true);
 	}
 	
 	@Override
@@ -231,4 +229,6 @@ public class Dalek extends IRobot implements IObserver, Serializable{
 	public int getHeight() {
 		return height;
 	}
+	
 }
+

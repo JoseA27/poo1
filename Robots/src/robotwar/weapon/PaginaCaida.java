@@ -1,4 +1,4 @@
-package robotwar.dalek;
+package robotwar.weapon;
 
 import java.awt.Image;
 
@@ -7,12 +7,15 @@ import javax.swing.ImageIcon;
 import robotwar.common.robotbase.ORIENTATION;
 import robotwar.common.robotbase.Weapon;
 
-public class Gunstick extends Weapon{
-	private Image imagen = new ImageIcon("C:\\Users\\josea\\Desktop\\Imagenes poo\\Fuego.jpg").getImage();
+public class PaginaCaida extends Weapon{
+	private Image imagen = new ImageIcon("").getImage();
 	
-	public Gunstick() {
-		super(70, 1, 100);
+	
+	public PaginaCaida() {
+		super(20, 5, 20);
 	}
+
+	
 	public void triggerWeapon(int pPosX, int pPosY, ORIENTATION pDirection) {
 		
 	}
@@ -20,4 +23,3 @@ public class Gunstick extends Weapon{
 		return this.imagen;
 	}
 }
-
